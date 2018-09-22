@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ibq-HS-zIS">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Nasoni-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Nasoni" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qw3-oE-VO4">
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="GFT-ZV-hz5"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qw3-oE-VO4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="CA4-K4-vLm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qw3-oE-VO4" secondAttribute="trailing" id="K4A-JW-CJC"/>
+                            <constraint firstItem="Qw3-oE-VO4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="NeT-ad-t2r"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Qw3-oE-VO4" secondAttribute="bottom" id="Pv1-SR-hBS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Qw3-oE-VO4" secondAttribute="bottom" id="bbf-C8-1bj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Nasoni" id="FvU-MW-fQs">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="L3E-qz-8Ja">
+                            <connections>
+                                <segue destination="fh9-bO-5IH" kind="show" identifier="mysegue" id="7Yw-Xl-QjW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="map" destination="Qw3-oE-VO4" id="ANg-Fz-9G3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="36"/>
+        </scene>
+        <!--Nasoni View Controller-->
+        <scene sceneID="BNl-fJ-7tC">
+            <objects>
+                <viewController id="fh9-bO-5IH" customClass="NasoniViewController" customModule="Nasoni" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y0A-rw-j4l"/>
+                        <viewControllerLayoutGuide type="bottom" id="3F2-ws-4Sd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RGn-SW-Hvh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TjK-P4-ni4">
+                                <connections>
+                                    <outlet property="delegate" destination="fh9-bO-5IH" id="SGj-Jv-gKx"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TjK-P4-ni4" firstAttribute="top" secondItem="y0A-rw-j4l" secondAttribute="bottom" id="JwG-Xk-gwg"/>
+                            <constraint firstItem="TjK-P4-ni4" firstAttribute="leading" secondItem="RGn-SW-Hvh" secondAttribute="leadingMargin" id="Kvq-dk-uor"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TjK-P4-ni4" secondAttribute="trailing" id="iJE-Z1-dSy"/>
+                            <constraint firstItem="3F2-ws-4Sd" firstAttribute="top" secondItem="TjK-P4-ni4" secondAttribute="bottom" id="vxc-fa-j2x"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="map1" destination="TjK-P4-ni4" id="U93-k1-lNL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EZx-f9-YgO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1206" y="36"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="C04-BH-hsE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ibq-HS-zIS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="01L-Xq-oll">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="SbF-M8-dhp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kfZ-pd-ZOC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-186" y="36"/>
+        </scene>
+    </scenes>
+</document>
